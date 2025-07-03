@@ -92,7 +92,7 @@ public class Main {
         for (BankAccount account : bankAccounts) {
             if (account.getAccountNumber().equals(accountNumber)) {
                 // Checks if the amount to withdraw is more than the available balance
-                if (account.getAvailableBalance() > amountToWithdraw) {
+                if (account.getAvailableBalance() < amountToWithdraw) {
                     System.out.println("Invalid amount, check your balance.");
                     return;
                 }
